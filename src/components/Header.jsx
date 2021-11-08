@@ -11,6 +11,7 @@ import napoliLogo from "../assets/napoli-logo.jpeg";
 function Header() {
   return (
     <>
+    <Box>
       <Container maxW="container.xl">
         <header>
           <Flex
@@ -46,6 +47,7 @@ function Header() {
           <Divider mt="8"  />
         </header>
       </Container>
+      </Box>
     </>
   );
 }
