@@ -30,7 +30,7 @@ function Header() {
                     pointerEvents="none"
                     children={<FaSistrix color="gray.300" />}
                   />
-                  <Input type="tel" placeholder="Search..." />
+                  <Input type="text" placeholder="Search..." />
                 </InputGroup>
               </Flex>
             </Box>

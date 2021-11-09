@@ -15,7 +15,13 @@ function Main() {
           alignItems="center"
           position="relative"
         >
-          <Image w="80%" src={napoliMember}></Image>
+          <Image w={{
+              sm: "100%",
+              md: "80%",
+              lg: "80%",
+              xl: "80%",
+              base: "100%",
+            }} src={napoliMember}></Image>
           <Heading
             position="absolute"
             top="40%"
