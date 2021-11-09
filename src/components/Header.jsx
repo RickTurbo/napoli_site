@@ -36,10 +36,10 @@ function Header() {
             </Box>
 
             <Box>
-              <Button pr={3} colorScheme="teal" fontSize="lg" variant="link">
+              <Button pr={3} colorScheme="blue" fontSize="lg" variant="link">
                 Log in
               </Button>
-              <Button colorScheme="teal" fontSize="lg" variant="link">
+              <Button colorScheme="blue" fontSize="lg" variant="link">
                 Sign up
               </Button>
             </Box>

@@ -3,28 +3,128 @@ import { Image } from "@chakra-ui/image";
 import { Box, Container, Divider, Flex, Heading } from "@chakra-ui/layout";
 import React from "react";
 import napoliMember from "../assets/napoli-member.jpg";
+import napoliRed from "../assets/napoli_red.jpg";
 
 function Main() {
   return (
     <Box>
       <Container maxW="container.xl">
-        <Flex w="100%" justifyContent="center">
-          <Image w="80%" src={napoliMember} position="relative"></Image>
+        <Flex
+          w="100%"
+          justifyContent="center"
+          alignItems="center"
+          position="relative"
+        >
+          <Image w="80%" src={napoliMember}></Image>
+          <Heading
+            position="absolute"
+            top="40%"
+            left="20%"
+            fontSize={{
+              sm: "3xl",
+              md: "6xl",
+              lg: "9xl",
+              xl: "9xl",
+              base: "3xl",
+            }}
+            color="blue.200"
+            fontWeight="extrabold"
+            bgGradient="linear(to-r, cyan.100, blue.300,  blue.600)"
+            bgClip="text"
+          >
+            SSC NAPOLI
+          </Heading>
+          <Heading
+            position="absolute"
+            top="65%"
+            left="40%"
+            fontSize={{
+              sm: "2xl",
+              md: "5xl",
+              lg: "5xl",
+              xl: "5xl",
+              base: "2xl",
+            }}
+            color="blue.200"
+            fontWeight="extrabold"
+            bgGradient="linear(to-r, cyan.400, blue.300,  pink.200)"
+            bgClip="text"
+          >
+            Players
+          </Heading>
         </Flex>
-        <Heading mb={20} textAlign="center">
+        <Heading
+          mb={20}
+          textAlign="center"
+          fontSize={{
+            sm: "lg",
+            md: "3xl",
+            lg: "3xl",
+            xl: "3xl",
+            base: "lg",
+          }}
+        >
           イタリアのサッカーチーム　SSC　NAPOLIについて紹介します
         </Heading>
       </Container>
       <Container maxW="container.lg">
         <Divider />
-        <Flex justifyContent='space-between' mt={20}  mb={20}>
-        <Button colorScheme="blue" size='lg'>Players</Button>
-        <Button colorScheme="blue" size='lg'>Crew</Button>
-        <Button colorScheme="blue" size='lg'>History</Button>
+        <Flex justifyContent="space-between" mt={20} mb={20}>
+          <Button
+            color="white"
+            bgGradient="linear(to-r, cyan.400,   pink.400)"
+            _hover={{ opacity: 0.8 }}
+            size="lg"
+            fontSize='3xl'
+            px='16'
+          >
+            Players
+          </Button>
+          <Button
+            color="white"
+            bgGradient="linear(to-r, yellow.200,   green.400)"
+            _hover={{ opacity: 0.8 }}
+            size="lg"
+            fontSize='3xl'
+            px='16'
+          >
+            Crew
+          </Button>
+          <Button
+            color="white"
+            bgGradient="linear(to-r, red.500,  blue.600)"
+            _hover={{ opacity: 0.8 }}
+            size="lg"
+            fontSize='3xl'
+            px='16'
+          >
+            History
+          </Button>
         </Flex>
-        <Box mb={40}>
+        <Box>
           <Divider />
         </Box>
+      </Container>
+
+      <Container maxW="container.sm" mb={6}>
+        <Flex alignItems="center" justifyContent="center" mt={14}>
+          <Heading
+            bgGradient="linear(to-r, cyan.400, blue.300,  pink.200)"
+            bgClip="text"
+            fontWeight='extrabold'
+          >
+            Players
+          </Heading>
+        </Flex>
+        <Flex mt={5} justifyContent="center">
+          <Divider />
+        </Flex>
+      </Container>
+
+      <Container maxW="container.xl">
+        <Flex w='100%' justifyContent='center' alignItems="center" >
+          <Image w='80%' src={napoliRed}></Image>
+        </Flex>
       </Container>
     </Box>
   );
