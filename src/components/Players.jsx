@@ -18,8 +18,9 @@ import {
 import Lozano from "../assets/Lozano.JPG";
 import Insigne from "../assets/Insigne.PNG";
 import Osimhen from "../assets/Osimhen.JPG";
-// import Petagna from "../assets/Petagna.JPG";
-// import Politano from "../assets/Politano.JPG";
+import Petagna from "../assets/Petagna.JPG";
+import Politano from "../assets/Politano.JPG";
+import Mertens from "../assets/Mertens.JPG"
 // import Zielinski from "../assets/Zielinski.JPG";
 // import Elmas from "../assets/Elmas.JPG";
 // import Rrahmani from "../assets/Rrahmani.JPG";
@@ -143,6 +144,112 @@ function Players() {
               </AccordionItem>
             </Accordion>
           </Box>
+
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Petagna} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Andrea Petagna
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Politano} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Matteo Politano
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Mertens} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Dries Mertens 14
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+
         </Grid>
       </Container>
     </>

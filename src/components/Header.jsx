@@ -22,19 +22,8 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  const HoverLink = () => (
-    <Link rounded="base" _hover={{ bg: "gray.200" }} p={2} />
-  );
-  const Navigation = () => {
-    return (
-      <Stack as="nav">
-        <HoverLink href="/burger">Burger</HoverLink>
-        <HoverLink href="/sidemenu">Sidemenu</HoverLink>
-        <HoverLink href="/drink">Drink</HoverLink>
-        <HoverLink href="/takeout">Takeout</HoverLink>
-      </Stack>
-    );
-  };
+  
+
 
   return (
     <>
