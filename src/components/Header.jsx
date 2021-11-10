@@ -77,7 +77,7 @@ function Header() {
 
                   <Image boxSize="60px" src={napoliLogo} alt="brand" mr="8" />
                   <Icon as={FaWaze}></Icon>
-                  <InputGroup>
+                  <InputGroup　display={{ base: "none", md: "block" }}>
                     <InputLeftElement
                       pointerEvents="none"
                       children={<FaSistrix color="gray.300" />}
