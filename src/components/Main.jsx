@@ -5,8 +5,6 @@ import React from "react";
 import napoliMember from "../assets/napoli-member.jpg";
 import napoliRed from "../assets/napoli_red.jpg";
 
-
-
 function Main() {
   return (
     <Box>
@@ -17,13 +15,16 @@ function Main() {
           alignItems="center"
           position="relative"
         >
-          <Image w={{
+          <Image
+            w={{
               sm: "100%",
               md: "80%",
               lg: "80%",
               xl: "80%",
               base: "100%",
-            }} src={napoliMember}></Image>
+            }}
+            src={napoliMember}
+          ></Image>
           <Heading
             position="absolute"
             top="40%"
@@ -72,7 +73,7 @@ function Main() {
             base: "lg",
           }}
         >
-          イタリアのサッカーチーム　SSC　NAPOLIについて紹介します
+          イタリアのサッカーチーム  SSC  NAPOLIについて紹介します
         </Heading>
       </Container>
       <Container maxW="container.lg">
@@ -83,8 +84,8 @@ function Main() {
             bgGradient="linear(to-r, cyan.400,   pink.400)"
             _hover={{ opacity: 0.8 }}
             size="lg"
-            fontSize='3xl'
-            px='16'
+            fontSize={{base:"xl", md:"3xl"}}
+            px={{base:6, md:16}}
           >
             Players
           </Button>
@@ -93,8 +94,8 @@ function Main() {
             bgGradient="linear(to-r, yellow.200,   green.400)"
             _hover={{ opacity: 0.8 }}
             size="lg"
-            fontSize='3xl'
-            px='16'
+            fontSize={{base:"xl", md:"3xl"}}
+            px={{base:6, md:16}}
           >
             Crew
           </Button>
@@ -103,8 +104,8 @@ function Main() {
             bgGradient="linear(to-r, red.500,  blue.600)"
             _hover={{ opacity: 0.8 }}
             size="lg"
-            fontSize='3xl'
-            px='16'
+            fontSize={{base:"xl", md:"3xl"}}
+            px={{base:6, md:16}}
           >
             History
           </Button>
@@ -119,7 +120,7 @@ function Main() {
           <Heading
             bgGradient="linear(to-r, cyan.400, blue.300,  pink.200)"
             bgClip="text"
-            fontWeight='extrabold'
+            fontWeight="extrabold"
           >
             Players
           </Heading>
@@ -130,8 +131,8 @@ function Main() {
       </Container>
 
       <Container maxW="container.xl">
-        <Flex w='100%' justifyContent='center' alignItems="center" >
-          <Image w='80%' src={napoliRed}></Image>
+        <Flex w="100%" justifyContent="center" alignItems="center">
+          <Image w="80%" src={napoliRed}></Image>
         </Flex>
       </Container>
     </Box>
