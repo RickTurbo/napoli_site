@@ -25,6 +25,16 @@ function Header() {
   const HoverLink = () => (
     <Link rounded="base" _hover={{ bg: "gray.200" }} p={2} />
   );
+  const Navigation = () => {
+    return (
+      <Stack as="nav">
+        <HoverLink href="/burger">Burger</HoverLink>
+        <HoverLink href="/sidemenu">Sidemenu</HoverLink>
+        <HoverLink href="/drink">Drink</HoverLink>
+        <HoverLink href="/takeout">Takeout</HoverLink>
+      </Stack>
+    );
+  };
 
   return (
     <>
@@ -55,14 +65,45 @@ function Header() {
                     <DrawerOverlay />
                     <DrawerContent>
                       <DrawerCloseButton />
-                      <DrawerHeader>Menu</DrawerHeader>
+                      <DrawerHeader fontSize="3xl">Menu</DrawerHeader>
 
                       <DrawerBody>
-                        <Stack as="nav">
-                          <HoverLink>Burger</HoverLink>
-                          <HoverLink>Sidemenu</HoverLink>
-                          <HoverLink>Drink</HoverLink>
-                          <HoverLink>Takeout</HoverLink>
+                        <Icon as={FaWaze}></Icon>
+                        <InputGroup>
+                          <InputLeftElement
+                            pointerEvents="none"
+                            children={<FaSistrix color="gray.300" />}
+                          />
+                          <Input type="text" placeholder="Search..." />
+                        </InputGroup>
+                        <Stack mt={10} as="nav">
+                          <Link
+                            fontWeight="semibold"
+                            fontSize="2xl"
+                            rounded="base"
+                            _hover={{ bg: "gray.200" }}
+                            p={2}
+                          >
+                            Players
+                          </Link>
+                          <Link
+                            fontWeight="semibold"
+                            fontSize="2xl"
+                            rounded="base"
+                            _hover={{ bg: "gray.200" }}
+                            p={2}
+                          >
+                            Crew
+                          </Link>
+                          <Link
+                            fontWeight="semibold"
+                            fontSize="2xl"
+                            rounded="base"
+                            _hover={{ bg: "gray.200" }}
+                            p={2}
+                          >
+                            History
+                          </Link>
                         </Stack>
                       </DrawerBody>
 
@@ -76,8 +117,11 @@ function Header() {
                   </Drawer>
 
                   <Image boxSize="60px" src={napoliLogo} alt="brand" mr="8" />
-                  <Icon as={FaWaze}></Icon>
-                  <InputGroup　display={{ base: "none", md: "block" }}>
+                  <Icon
+                    as={FaWaze}
+                    display={{ base: "none", md: "block" }}
+                  ></Icon>
+                  <InputGroup display={{ base: "none", md: "block" }}>
                     <InputLeftElement
                       pointerEvents="none"
                       children={<FaSistrix color="gray.300" />}
