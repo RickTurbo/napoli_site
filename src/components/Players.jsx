@@ -7,7 +7,6 @@ import {
   AccordionPanel,
 } from "@chakra-ui/accordion";
 import { Image } from "@chakra-ui/image";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import {
   Box,
   Container,
@@ -24,7 +23,7 @@ import Politano from "../assets/Politano.JPG";
 import Mertens from "../assets/Mertens.JPG";
 import Zielinski from "../assets/Zielinski.JPG";
 import Elmas from "../assets/Elmas.JPG";
-import Fabian from "../assets/Fabian.JPG"
+import Fabian from "../assets/Fabian.JPG";
 // import Rrahmani from "../assets/Rrahmani.JPG";
 
 function Players() {
@@ -360,6 +359,92 @@ function Players() {
                       color="blue.300"
                     >
                       Fabian Ruiz 8
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+        </Grid>
+
+        <Flex>
+          <Heading
+            color="blue.300"
+            fontWeight="light"
+            fontSize="6xl"
+            id="DF"
+            mt={8}
+          >
+            DF
+          </Heading>
+        </Flex>
+        <Box mb={8}>
+          <Divider w={52} color="blue.300" />
+        </Box>
+        <Grid
+          templateColumns={{
+            sm: "repeat(1, 1fr)",
+            md: "repeat(3,1fr)",
+            lg: "repeat(3,1fr)",
+            xl: "repeat(3,1fr)",
+            base: "repeat(1,1fr)",
+          }}
+          gap={6}
+        >
+          <Box>
+            <Image w="100%" src={Zielinski} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Piotr Zieliński 20
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Elmas} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Elif Elmas 7
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>

@@ -6,7 +6,7 @@ import { FaWaze, FaSistrix } from "react-icons/fa";
 import Icon from "@chakra-ui/icon";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
 import { Image } from "@chakra-ui/image";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+
 import {
   Drawer,
   DrawerBody,
