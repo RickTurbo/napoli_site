@@ -24,7 +24,11 @@ import Mertens from "../assets/Mertens.JPG";
 import Zielinski from "../assets/Zielinski.JPG";
 import Elmas from "../assets/Elmas.JPG";
 import Fabian from "../assets/Fabian.JPG";
-// import Rrahmani from "../assets/Rrahmani.JPG";
+import Rrahmani from "../assets/Rrahmani.JPG";
+import Koulybaly from "../assets/Koulibaly.JPG";
+import DiLorenzo from "../assets/DiLorenzo.JPG";
+import Meret from "../assets/Meret.JPG";
+import Ospina from "../assets/Ospina.JPG";
 
 function Players() {
   return (
@@ -399,7 +403,7 @@ function Players() {
           gap={6}
         >
           <Box>
-            <Image w="100%" src={Zielinski} borderRadius="lg" />
+            <Image w="100%" src={Rrahmani} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
               <AccordionItem>
                 <h2>
@@ -410,7 +414,7 @@ function Players() {
                       fontWeight="bold"
                       color="blue.300"
                     >
-                      Piotr Zieliński 20
+                      Amir Rrahmani 13
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -433,7 +437,7 @@ function Players() {
               base: "10",
             }}
           >
-            <Image w="100%" src={Elmas} borderRadius="lg" />
+            <Image w="100%" src={Koulybaly} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
               <AccordionItem>
                 <h2>
@@ -444,7 +448,128 @@ function Players() {
                       fontWeight="bold"
                       color="blue.300"
                     >
-                      Elif Elmas 7
+                      Kalidou Koulibaly 26
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={DiLorenzo} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Giovanni Di Lorenzo 22
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+        </Grid>
+
+        <Flex>
+          <Heading
+            color="blue.300"
+            fontWeight="light"
+            fontSize="6xl"
+            id="GK"
+            mt={8}
+            
+          >
+            GK
+          </Heading>
+        </Flex>
+        <Box mb={8}>
+          <Divider w={52} color="blue.300" />
+        </Box>
+        <Grid
+          templateColumns={{
+            sm: "repeat(1, 1fr)",
+            md: "repeat(3,1fr)",
+            lg: "repeat(3,1fr)",
+            xl: "repeat(3,1fr)",
+            base: "repeat(1,1fr)",
+          }}
+          gap={6}
+        >
+          <Box>
+            <Image w="100%" src={Meret} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Alex Meret 1
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Ospina} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      David Ospina 25
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
