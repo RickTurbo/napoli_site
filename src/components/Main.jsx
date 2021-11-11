@@ -15,6 +15,7 @@ function Main() {
           justifyContent="center"
           alignItems="center"
           position="relative"
+          mt={16}
         >
           <Image
             w={{
@@ -88,7 +89,7 @@ function Main() {
             fontSize={{ base: "xl", md: "3xl" }}
             px={{ base: 6, md: 16 }}
           >
-            <AnchorLink href="#players">Players</AnchorLink>
+            <AnchorLink href="#players" offset="110" >Players</AnchorLink>
           </Button>
           <Button
             color="white"
@@ -128,17 +129,17 @@ function Main() {
           </Heading>
         </Flex>
         <Flex justifyContent="space-between" mt={6}>
-          <AnchorLink href="#FW">
-            <Button colorScheme="blue"   px={{ base: 6, md: 10 }} >FW</Button>
+          <AnchorLink href="#FW" offset="90">
+            <Button colorScheme="blue"   px={{ base: 4, md: 10 }} >FW</Button>
           </AnchorLink>
-          <AnchorLink href="#MF">
-            <Button colorScheme="blue"  px={{ base: 6, md: 10 }}>MF</Button>
+          <AnchorLink href="#MF" offset='100'>
+            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>MF</Button>
           </AnchorLink>
-          <AnchorLink href="#DF">
-            <Button colorScheme="blue"  px={{ base: 6, md: 10 }}>DF</Button>
+          <AnchorLink href="#DF" offset='100'>
+            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>DF</Button>
           </AnchorLink>
-          <AnchorLink href="#GK">
-            <Button colorScheme="blue"  px={{ base: 6, md: 10 }}>GK</Button>
+          <AnchorLink href="#GK" offset='100'>
+            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>GK</Button>
           </AnchorLink>
         </Flex>
         <Flex mt={5} justifyContent="center">
