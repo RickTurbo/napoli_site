@@ -27,7 +27,10 @@ function Header() {
   return (
     <>
       <Box>
-        <Container maxW="container.xl">
+        <Container
+          maxW="container.xl"
+          // position="fixed" top="0" zIndex={10}
+        >
           <header>
             <Flex
               alignItems="center"
@@ -99,12 +102,16 @@ function Header() {
                         <Button variant="outline" mr={3} onClick={onClose}>
                           Cancel
                         </Button>
-                        <Button colorScheme="blue">Save</Button>
                       </DrawerFooter>
                     </DrawerContent>
                   </Drawer>
 
-                  <Image boxSize="60px" src={napoliLogo} alt="brand" mr="8" />
+                  <Image
+                    boxSize={{ base: "40px", md: "60px" }}
+                    src={napoliLogo}
+                    alt="brand"
+                    mr="8"
+                  />
                   <Icon
                     as={FaWaze}
                     display={{ base: "none", md: "block" }}

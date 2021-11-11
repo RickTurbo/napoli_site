@@ -8,7 +8,7 @@ import napoliRed from "../assets/napoli_red.jpg";
 
 function Main() {
   return (
-    <Box>
+    <Box mt={10}>
       <Container maxW="container.xl">
         <Flex
           w="100%"
@@ -68,9 +68,9 @@ function Main() {
           textAlign="center"
           fontSize={{
             sm: "lg",
-            md: "3xl",
-            lg: "3xl",
-            xl: "3xl",
+            md: "4xl",
+            lg: "4xl",
+            xl: "4xl",
             base: "lg",
           }}
         >
@@ -129,16 +129,16 @@ function Main() {
         </Flex>
         <Flex justifyContent="space-between" mt={6}>
           <AnchorLink href="#FW">
-            <Button>FW</Button>
+            <Button colorScheme="blue"   px={{ base: 6, md: 10 }} >FW</Button>
           </AnchorLink>
           <AnchorLink href="#MF">
-            <Button>MF</Button>
+            <Button colorScheme="blue"  px={{ base: 6, md: 10 }}>MF</Button>
           </AnchorLink>
           <AnchorLink href="#DF">
-            <Button>DF</Button>
+            <Button colorScheme="blue"  px={{ base: 6, md: 10 }}>DF</Button>
           </AnchorLink>
           <AnchorLink href="#GK">
-            <Button>GK</Button>
+            <Button colorScheme="blue"  px={{ base: 6, md: 10 }}>GK</Button>
           </AnchorLink>
         </Flex>
         <Flex mt={5} justifyContent="center">

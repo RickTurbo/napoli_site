@@ -29,6 +29,12 @@ import Koulybaly from "../assets/Koulibaly.JPG";
 import DiLorenzo from "../assets/DiLorenzo.JPG";
 import Meret from "../assets/Meret.JPG";
 import Ospina from "../assets/Ospina.JPG";
+import Demme from "../assets/Demme.JPG";
+import Anguissa from "../assets/Anguissa.JPG";
+import Lobotka from "../assets/Lobotka.JPG";
+import Mario from "../assets/Mario.JPG";
+import Malcuit from "../assets/Malcuit.JPG";
+import Ghoulam from "../assets/Ghoulam.JPG";
 
 function Players() {
   return (
@@ -376,6 +382,108 @@ function Players() {
               </AccordionItem>
             </Accordion>
           </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Demme} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Diego Demme 4
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Anguissa} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      André-Frank Zambo Anguissa 99
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Lobotka} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Stanislav Lobotka 68
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
         </Grid>
 
         <Flex>
@@ -496,6 +604,108 @@ function Players() {
               </AccordionItem>
             </Accordion>
           </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Mario} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Mario Rui 6
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Malcuit} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Kévin Malcuit ２
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
+          <Box
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "10",
+            }}
+          >
+            <Image w="100%" src={Ghoulam} borderRadius="lg" />
+            <Accordion allowToggle mt={5}>
+              <AccordionItem>
+                <h2>
+                  <AccordionButton>
+                    <Box
+                      flex="1"
+                      textAlign="left"
+                      fontWeight="bold"
+                      color="blue.300"
+                    >
+                      Faouzi Ghoulam 31
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel pb={4}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          </Box>
         </Grid>
 
         <Flex>
@@ -505,7 +715,6 @@ function Players() {
             fontSize="6xl"
             id="GK"
             mt={8}
-            
           >
             GK
           </Heading>
