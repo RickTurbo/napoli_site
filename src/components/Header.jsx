@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "@chakra-ui/button";
-import { Box, Container, Divider, Flex, Link, Stack } from "@chakra-ui/layout";
+import { Box, Divider, Flex, Link, Stack } from "@chakra-ui/layout";
 import { FaWaze, FaSistrix } from "react-icons/fa";
 import Icon from "@chakra-ui/icon";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
