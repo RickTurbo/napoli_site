@@ -59,7 +59,7 @@ function Players() {
           }}
           gap={6}
         >
-          <Box>
+          <Box _hover={{opacity:0.9}}>
             <Image w="100%" src={Lozano} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
               <AccordionItem>
@@ -94,6 +94,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Insigne} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -129,6 +130,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Osimhen} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -164,6 +166,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Petagna} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -199,6 +202,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Politano} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -234,6 +238,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Mertens} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -286,7 +291,7 @@ function Players() {
           }}
           gap={6}
         >
-          <Box>
+          <Box _hover={{opacity:0.9}}>
             <Image w="100%" src={Zielinski} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
               <AccordionItem>
@@ -321,6 +326,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Elmas} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -356,6 +362,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Fabian} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -390,6 +397,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Demme} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -424,6 +432,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Anguissa} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -458,6 +467,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Lobotka} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -510,7 +520,7 @@ function Players() {
           }}
           gap={6}
         >
-          <Box>
+          <Box _hover={{opacity:0.9}}>
             <Image w="100%" src={Rrahmani} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
               <AccordionItem>
@@ -544,6 +554,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Koulybaly} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -578,6 +589,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={DiLorenzo} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -612,6 +624,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Mario} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -646,6 +659,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Malcuit} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -680,6 +694,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Ghoulam} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
@@ -732,7 +747,7 @@ function Players() {
           }}
           gap={6}
         >
-          <Box>
+          <Box _hover={{opacity:0.9}}>
             <Image w="100%" src={Meret} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
               <AccordionItem>
@@ -766,6 +781,7 @@ function Players() {
               xl: "0",
               base: "10",
             }}
+            _hover={{opacity:0.9}}
           >
             <Image w="100%" src={Ospina} borderRadius="lg" />
             <Accordion allowToggle mt={5}>

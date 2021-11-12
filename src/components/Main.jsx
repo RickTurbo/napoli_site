@@ -8,7 +8,7 @@ import napoliRed from "../assets/napoli_red.jpg";
 
 function Main() {
   return (
-    <Box mt={10}>
+    <Box mt={10} id='home'>
       <Container maxW="container.xl">
         <Flex
           w="100%"

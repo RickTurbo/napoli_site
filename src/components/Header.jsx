@@ -19,6 +19,7 @@ import {
 import { useDisclosure } from "@chakra-ui/react";
 import napoliLogo from "../assets/napoli-logo.jpeg";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -44,7 +45,7 @@ function Header() {
           >
             <Box>
               <Flex alignItems="center">
-                <Box display={{ base: "block", md: "none" }}>
+                <Box display={{ base: "block", md: "none" }} mr={4}>
                   <Button ref={btnRef} onClick={onOpen}>
                     <HamburgerIcon />
                   </Button>
@@ -108,13 +109,15 @@ function Header() {
                     </DrawerFooter>
                   </DrawerContent>
                 </Drawer>
+                <AnchorLink href='#home' offset='100'>
+                  <Image
+                    boxSize={{ base: "40px", md: "60px" }}
+                    src={napoliLogo}
+                    alt="brand"
+                    mr="8"
+                  />
+                </AnchorLink>
 
-                <Image
-                  boxSize={{ base: "40px", md: "60px" }}
-                  src={napoliLogo}
-                  alt="brand"
-                  mr="8"
-                />
                 <Icon
                   as={FaWaze}
                   display={{ base: "none", md: "block" }}
@@ -130,11 +133,16 @@ function Header() {
             </Box>
 
             <Box>
+              <AnchorLink href="#players" offset="100">
+                <Button pr={3} colorScheme="blue" fontSize="lg" variant="link">
+                  Players
+                </Button>
+              </AnchorLink>
               <Button pr={3} colorScheme="blue" fontSize="lg" variant="link">
-                Log in
+                Crew
               </Button>
               <Button colorScheme="blue" fontSize="lg" variant="link">
-                Sign up
+                History
               </Button>
             </Box>
           </Flex>
