@@ -8,7 +8,7 @@ import napoliRed from "../assets/napoli_red.jpg";
 
 function Main() {
   return (
-    <Box mt={10} id='home'>
+    <Box mt={10} id="home">
       <Container maxW="container.xl">
         <Flex
           w="100%"
@@ -87,9 +87,11 @@ function Main() {
             _hover={{ opacity: 0.8 }}
             size="lg"
             fontSize={{ base: "xl", md: "3xl" }}
-            px={{ base: 6, md: 16 }}
+            px={{ base: 6, md: 12 }}
           >
-            <AnchorLink href="#players" offset="110" >Players</AnchorLink>
+            <AnchorLink href="#players" offset="110">
+              Players
+            </AnchorLink>
           </Button>
           <Button
             color="white"
@@ -97,7 +99,7 @@ function Main() {
             _hover={{ opacity: 0.8 }}
             size="lg"
             fontSize={{ base: "xl", md: "3xl" }}
-            px={{ base: 6, md: 16 }}
+            px={{ base: 6, md: 12 }}
           >
             Crew
           </Button>
@@ -107,9 +109,11 @@ function Main() {
             _hover={{ opacity: 0.8 }}
             size="lg"
             fontSize={{ base: "xl", md: "3xl" }}
-            px={{ base: 6, md: 16 }}
+            px={{ base: 6, md: 12 }}
           >
+            <AnchorLink href='#History' offset='110'>
             History
+            </AnchorLink>
           </Button>
         </Flex>
         <Box>
@@ -130,16 +134,24 @@ function Main() {
         </Flex>
         <Flex justifyContent="space-between" mt={6}>
           <AnchorLink href="#FW" offset="90">
-            <Button colorScheme="blue"   px={{ base: 4, md: 10 }} >FW</Button>
+            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>
+              FW
+            </Button>
           </AnchorLink>
-          <AnchorLink href="#MF" offset='100'>
-            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>MF</Button>
+          <AnchorLink href="#MF" offset="100">
+            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>
+              MF
+            </Button>
           </AnchorLink>
-          <AnchorLink href="#DF" offset='100'>
-            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>DF</Button>
+          <AnchorLink href="#DF" offset="100">
+            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>
+              DF
+            </Button>
           </AnchorLink>
-          <AnchorLink href="#GK" offset='100'>
-            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>GK</Button>
+          <AnchorLink href="#GK" offset="100">
+            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>
+              GK
+            </Button>
           </AnchorLink>
         </Flex>
         <Flex mt={5} justifyContent="center">

@@ -3,6 +3,7 @@
 // import { Box } from '@chakra-ui/layout';
 import './App.css';
 import Header from './components/Header';
+import History from './components/History';
 import Main from './components/Main';
 // import imageBg from './assets/bg.svg'
 import Players from './components/Players';
@@ -14,6 +15,7 @@ function App() {
   <Header/>
   <Main/>
   <Players/>
+  <History/>
   {/* </Box> */}
   {/* <Box
         position="relative"

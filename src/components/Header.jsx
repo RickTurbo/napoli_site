@@ -142,7 +142,9 @@ function Header() {
                 Crew
               </Button>
               <Button colorScheme="blue" fontSize="lg" variant="link">
+                <AnchorLink href='#History' offset='100'>
                 History
+                </AnchorLink>
               </Button>
             </Box>
           </Flex>
