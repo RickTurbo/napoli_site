@@ -28,7 +28,7 @@ function History() {
       <Container maxW="container.xl">
         <Flex
           alignItems="center"
-          py="20"
+          py="10"
           flexDirection={{
             sm: "column",
             md: "row",

@@ -73,6 +73,7 @@ function Players() {
                       // eslint-disable-next-line react/jsx-no-duplicate-props
                       textAlign="center"
                       fontSize="xl"
+                      // eslint-disable-next-line react/jsx-no-duplicate-props
                       fontWeight="extrabold"
                     >
                       Hirving Lozano 11
@@ -86,7 +87,7 @@ function Players() {
                     <Box pr="4">1995</Box>
                     <Box>07/30</Box>
                   </Flex>
-                  <Box pt="4">
+                  <Box pt="4" color='blue.700'>
                     あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
                   </Box>
                 </AccordionPanel>
