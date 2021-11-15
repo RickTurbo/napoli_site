@@ -68,11 +68,11 @@ function Main() {
           mb={20}
           textAlign="center"
           fontSize={{
-            sm: "lg",
+            sm: "2xl",
             md: "4xl",
             lg: "4xl",
             xl: "4xl",
-            base: "lg",
+            base: "2xl",
           }}
         >
           イタリアのサッカーチーム SSC NAPOLIについて紹介します
