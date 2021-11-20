@@ -64,7 +64,7 @@ function Main() {
             Players
           </Heading>
         </Flex>
-        <Heading
+        {/* <Heading
           mb={20}
           textAlign="center"
           fontSize={{
@@ -76,9 +76,9 @@ function Main() {
           }}
         >
           イタリアのサッカーチーム SSC NAPOLIについて紹介します
-        </Heading>
+        </Heading> */}
       </Container>
-      <Container maxW="container.lg">
+      <Container maxW="container.lg" mt={16}>
         <Divider />
         <Flex justifyContent="space-between" mt={20} mb={20}>
           <Button
