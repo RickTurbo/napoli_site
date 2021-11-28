@@ -20,6 +20,7 @@ import { useDisclosure } from "@chakra-ui/react";
 import napoliLogo from "../assets/napoli-logo.jpeg";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { MotionButton } from "../animations/variants";
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -109,7 +110,7 @@ function Header() {
                     </DrawerFooter>
                   </DrawerContent>
                 </Drawer>
-                <AnchorLink href='#home' offset='100'>
+                <AnchorLink href="#home" offset="100">
                   <Image
                     boxSize={{ base: "40px", md: "60px" }}
                     src={napoliLogo}
@@ -134,18 +135,35 @@ function Header() {
 
             <Box>
               <AnchorLink href="#players" offset="100">
-                <Button pr={3} colorScheme="blue" fontSize="lg" variant="link">
+                <MotionButton
+                  pr={3}
+                  colorScheme="blue"
+                  fontSize="lg"
+                  variant="link"
+                  whileHover={{ scale: 1.2 }}
+                >
                   Players
-                </Button>
+                </MotionButton>
               </AnchorLink>
-              <Button pr={3} colorScheme="blue" fontSize="lg" variant="link">
+              <MotionButton
+                pr={3}
+                colorScheme="blue"
+                fontSize="lg"
+                variant="link"
+                whileHover={{ scale: 1.2 }}
+              >
                 Crew
-              </Button>
-              <Button colorScheme="blue" fontSize="lg" variant="link">
-                <AnchorLink href='#History' offset='100'>
-                History
+              </MotionButton>
+              <MotionButton
+                colorScheme="blue"
+                fontSize="lg"
+                variant="link"
+                whileHover={{ scale: 1.2 }}
+              >
+                <AnchorLink href="#History" offset="100">
+                  History
                 </AnchorLink>
-              </Button>
+              </MotionButton>
             </Box>
           </Flex>
           <Divider mt="4" />

@@ -5,8 +5,12 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import React from "react";
 import napoliMember from "../assets/napoli-member.jpg";
 import napoliRed from "../assets/napoli_red.jpg";
+import { MotionButton } from "../animations/variants";
+
 
 function Main() {
+
+
   return (
     <Box mt={10} id="home">
       <Container maxW="container.xl">
@@ -81,40 +85,52 @@ function Main() {
       <Container maxW="container.lg" mt={16}>
         <Divider />
         <Flex justifyContent="space-between" mt={20} mb={20}>
-          <Button
+          <MotionButton
             color="white"
             bgGradient="linear(to-r, cyan.400,   pink.400)"
-            _hover={{ opacity: 0.8 }}
+            _hover={{ opacity: 0.9 }}
             size="lg"
             fontSize={{ base: "xl", md: "3xl" }}
             px={{ base: 6, md: 12 }}
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 8px rgb(255,255,255) ",
+            }}
           >
             <AnchorLink href="#players" offset="110">
               Players
             </AnchorLink>
-          </Button>
-          <Button
+          </MotionButton>
+          <MotionButton
             color="white"
             bgGradient="linear(to-r, yellow.200,   green.400)"
-            _hover={{ opacity: 0.8 }}
+            _hover={{ opacity: 0.9 }}
             size="lg"
             fontSize={{ base: "xl", md: "3xl" }}
             px={{ base: 6, md: 12 }}
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 8px rgb(255,255,255) ",
+            }}
           >
             Crew
-          </Button>
-          <Button
+          </MotionButton>
+          <MotionButton
             color="white"
             bgGradient="linear(to-r, red.500,  blue.600)"
-            _hover={{ opacity: 0.8 }}
+            _hover={{ opacity: 0.9 }}
             size="lg"
             fontSize={{ base: "xl", md: "3xl" }}
             px={{ base: 6, md: 12 }}
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 8px rgb(255,255,255) ",
+            }}
           >
-            <AnchorLink href='#History' offset='110'>
-            History
+            <AnchorLink href="#History" offset="110">
+              History
             </AnchorLink>
-          </Button>
+          </MotionButton>
         </Flex>
         <Box>
           <Divider />
