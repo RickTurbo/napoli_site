@@ -1,4 +1,3 @@
-import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import { Box, Container, Divider, Flex, Heading } from "@chakra-ui/layout";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -62,6 +61,10 @@ function Main() {
             initial={{ opacity: 0, y: "-200vh" }}
             animate={{ opacity: 1, y: "0", rotate: 360 }}
             transition={{ delay: 2, duration: 3, type: "spring",  }}
+            whileHover={{
+              scale: 1.1,
+              transition:{duration:0.5}
+            }}
           >
             SSC NAPOLI
           </MotionHeading>
