@@ -18,7 +18,7 @@ function Main() {
         maxW="container.xl"
         initial={{ opacity: 0, x: "200vh" }}
         animate={{ opacity: 1, x: "0" }}
-        transition={{ delay: 1, duration: 1 }}
+        transition={{ delay: 1, duration: 2 }}
       >
         <Flex
           w="100%"
@@ -28,6 +28,13 @@ function Main() {
           mt={16}
         >
           <Image
+            mt={{
+              sm: "20px",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "20px",
+            }}
             w={{
               sm: "100%",
               md: "80%",
@@ -53,8 +60,8 @@ function Main() {
             bgGradient="linear(to-r, cyan.100, blue.300,  blue.600)"
             bgClip="text"
             initial={{ opacity: 0, y: "-200vh" }}
-            animate={{ opacity: 1, y: "0" }}
-            transition={{ delay: 2, duration: 1.5 }}
+            animate={{ opacity: 1, y: "0", rotate: 360 }}
+            transition={{ delay: 2, duration: 3, type: "spring",  }}
           >
             SSC NAPOLI
           </MotionHeading>
@@ -159,24 +166,48 @@ function Main() {
         </Flex>
         <Flex justifyContent="space-between" mt={6}>
           <AnchorLink href="#FW" offset="90">
-            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>
+            <MotionButton
+              colorScheme="blue"
+              px={{ base: 4, md: 10 }}
+              whileHover={{
+                scale: 1.1,
+              }}
+            >
               FW
-            </Button>
+            </MotionButton>
           </AnchorLink>
           <AnchorLink href="#MF" offset="100">
-            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>
+            <MotionButton
+              colorScheme="blue"
+              px={{ base: 4, md: 10 }}
+              whileHover={{
+                scale: 1.1,
+              }}
+            >
               MF
-            </Button>
+            </MotionButton>
           </AnchorLink>
           <AnchorLink href="#DF" offset="100">
-            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>
+            <MotionButton
+              colorScheme="blue"
+              px={{ base: 4, md: 10 }}
+              whileHover={{
+                scale: 1.1,
+              }}
+            >
               DF
-            </Button>
+            </MotionButton>
           </AnchorLink>
           <AnchorLink href="#GK" offset="100">
-            <Button colorScheme="blue" px={{ base: 4, md: 10 }}>
+            <MotionButton
+              colorScheme="blue"
+              px={{ base: 4, md: 10 }}
+              whileHover={{
+                scale: 1.1,
+              }}
+            >
               GK
-            </Button>
+            </MotionButton>
           </AnchorLink>
         </Flex>
         <Flex mt={5} justifyContent="center">

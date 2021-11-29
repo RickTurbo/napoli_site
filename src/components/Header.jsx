@@ -20,131 +20,120 @@ import { useDisclosure } from "@chakra-ui/react";
 import napoliLogo from "../assets/napoli-logo.jpeg";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { MotionButton } from "../animations/variants";
+import { MotionBox, MotionButton } from "../animations/variants";
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
   return (
-    <>
-      <Box
-        position="fixed"
-        top="0"
-        zIndex={10}
-        opacity="0.9"
-        bg="gray.50"
-        w="100%"
-      >
-        <header>
-          <Flex
-            alignItems="center"
-            justifyContent="space-between"
-            ml={6}
-            mr={6}
-            mt={6}
-          >
-            <Box>
-              <Flex alignItems="center">
-                <Box display={{ base: "block", md: "none" }} mr={4}>
-                  <Button ref={btnRef} onClick={onOpen}>
-                    <HamburgerIcon />
-                  </Button>
-                </Box>
+    <MotionBox
+      position="fixed"
+      top="0"
+      zIndex={10}
+      opacity="0.9"
+      bg="gray.50"
+      w="100%"
+      initial ={{opacity:0}}
+      animate={{ opacity: 1,}}
+      transition={{ delay: 3, duration: 3 }}
+    >
+      <header>
+        <Flex
+          alignItems="center"
+          justifyContent="space-between"
+          ml={6}
+          mr={6}
+          mt={6}
+        >
+          <Box>
+            <Flex alignItems="center">
+              <Box display={{ base: "block", md: "none" }} mr={4}>
+                <Button ref={btnRef} onClick={onOpen}>
+                  <HamburgerIcon />
+                </Button>
+              </Box>
 
-                <Drawer
-                  isOpen={isOpen}
-                  placement="left"
-                  onClose={onClose}
-                  finalFocusRef={btnRef}
-                >
-                  <DrawerOverlay />
-                  <DrawerContent>
-                    <DrawerCloseButton />
-                    <DrawerHeader fontSize="3xl">Menu</DrawerHeader>
+              <Drawer
+                isOpen={isOpen}
+                placement="left"
+                onClose={onClose}
+                finalFocusRef={btnRef}
+              >
+                <DrawerOverlay />
+                <DrawerContent>
+                  <DrawerCloseButton />
+                  <DrawerHeader fontSize="3xl">Menu</DrawerHeader>
 
-                    <DrawerBody>
-                      <Icon as={FaWaze}></Icon>
-                      <InputGroup>
-                        <InputLeftElement
-                          pointerEvents="none"
-                          children={<FaSistrix color="gray.300" />}
-                        />
-                        <Input type="text" placeholder="Search..." />
-                      </InputGroup>
-                      <Stack mt={10} as="nav">
-                        <Link
-                          fontWeight="semibold"
-                          fontSize="2xl"
-                          rounded="base"
-                          _hover={{ bg: "gray.200" }}
-                          p={2}
-                        >
-                          Players
-                        </Link>
-                        <Link
-                          fontWeight="semibold"
-                          fontSize="2xl"
-                          rounded="base"
-                          _hover={{ bg: "gray.200" }}
-                          p={2}
-                        >
-                          Crew
-                        </Link>
-                        <Link
-                          fontWeight="semibold"
-                          fontSize="2xl"
-                          rounded="base"
-                          _hover={{ bg: "gray.200" }}
-                          p={2}
-                        >
-                          History
-                        </Link>
-                      </Stack>
-                    </DrawerBody>
+                  <DrawerBody>
+                    <Icon as={FaWaze}></Icon>
+                    <InputGroup>
+                      <InputLeftElement
+                        pointerEvents="none"
+                        children={<FaSistrix color="gray.300" />}
+                      />
+                      <Input type="text" placeholder="Search..." />
+                    </InputGroup>
+                    <Stack mt={10} as="nav">
+                      <Link
+                        fontWeight="semibold"
+                        fontSize="2xl"
+                        rounded="base"
+                        _hover={{ bg: "gray.200" }}
+                        p={2}
+                      >
+                        Players
+                      </Link>
+                      <Link
+                        fontWeight="semibold"
+                        fontSize="2xl"
+                        rounded="base"
+                        _hover={{ bg: "gray.200" }}
+                        p={2}
+                      >
+                        Crew
+                      </Link>
+                      <Link
+                        fontWeight="semibold"
+                        fontSize="2xl"
+                        rounded="base"
+                        _hover={{ bg: "gray.200" }}
+                        p={2}
+                      >
+                        History
+                      </Link>
+                    </Stack>
+                  </DrawerBody>
 
-                    <DrawerFooter>
-                      <Button variant="outline" mr={3} onClick={onClose}>
-                        Cancel
-                      </Button>
-                    </DrawerFooter>
-                  </DrawerContent>
-                </Drawer>
-                <AnchorLink href="#home" offset="100">
-                  <Image
-                    boxSize={{ base: "40px", md: "60px" }}
-                    src={napoliLogo}
-                    alt="brand"
-                    mr="8"
-                  />
-                </AnchorLink>
-
-                <Icon
-                  as={FaWaze}
-                  display={{ base: "none", md: "block" }}
-                ></Icon>
-                <InputGroup display={{ base: "none", md: "block" }}>
-                  <InputLeftElement
-                    pointerEvents="none"
-                    children={<FaSistrix color="gray.300" />}
-                  />
-                  <Input type="text" placeholder="Search..." />
-                </InputGroup>
-              </Flex>
-            </Box>
-
-            <Box>
-              <AnchorLink href="#players" offset="100">
-                <MotionButton
-                  pr={3}
-                  colorScheme="blue"
-                  fontSize="lg"
-                  variant="link"
-                  whileHover={{ scale: 1.2 }}
-                >
-                  Players
-                </MotionButton>
+                  <DrawerFooter>
+                    <Button variant="outline" mr={3} onClick={onClose}>
+                      Cancel
+                    </Button>
+                  </DrawerFooter>
+                </DrawerContent>
+              </Drawer>
+              <AnchorLink href="#home" offset="100">
+                <Image
+                  boxSize={{ base: "40px", md: "60px" }}
+                  src={napoliLogo}
+                  alt="brand"
+                  mr="8"
+                />
               </AnchorLink>
+
+              <Icon as={FaWaze} display={{ base: "none", md: "block" }}></Icon>
+              <InputGroup display={{ base: "none", md: "block" }}>
+                <InputLeftElement
+                  pointerEvents="none"
+                  children={<FaSistrix color="gray.300" />}
+                />
+                <Input type="text" placeholder="Search..." />
+              </InputGroup>
+            </Flex>
+          </Box>
+
+          <Box>
+            <AnchorLink href="#players" offset="100">
               <MotionButton
                 pr={3}
                 colorScheme="blue"
@@ -152,24 +141,33 @@ function Header() {
                 variant="link"
                 whileHover={{ scale: 1.2 }}
               >
-                Crew
+                Players
               </MotionButton>
-              <MotionButton
-                colorScheme="blue"
-                fontSize="lg"
-                variant="link"
-                whileHover={{ scale: 1.2 }}
-              >
-                <AnchorLink href="#History" offset="100">
-                  History
-                </AnchorLink>
-              </MotionButton>
-            </Box>
-          </Flex>
-          <Divider mt="4" />
-        </header>
-      </Box>
-    </>
+            </AnchorLink>
+            <MotionButton
+              pr={3}
+              colorScheme="blue"
+              fontSize="lg"
+              variant="link"
+              whileHover={{ scale: 1.2 }}
+            >
+              Crew
+            </MotionButton>
+            <MotionButton
+              colorScheme="blue"
+              fontSize="lg"
+              variant="link"
+              whileHover={{ scale: 1.2 }}
+            >
+              <AnchorLink href="#History" offset="100">
+                History
+              </AnchorLink>
+            </MotionButton>
+          </Box>
+        </Flex>
+        <Divider mt="4" />
+      </header>
+    </MotionBox>
   );
 }
 
