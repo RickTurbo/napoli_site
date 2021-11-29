@@ -5,15 +5,21 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import React from "react";
 import napoliMember from "../assets/napoli-member.jpg";
 import napoliRed from "../assets/napoli_red.jpg";
-import { MotionButton } from "../animations/variants";
-
+import {
+  MotionButton,
+  MotionContainer,
+  MotionHeading,
+} from "../animations/variants";
 
 function Main() {
-
-
   return (
     <Box mt={10} id="home">
-      <Container maxW="container.xl">
+      <MotionContainer
+        maxW="container.xl"
+        initial={{ opacity: 0, x: "200vh" }}
+        animate={{ opacity: 1, x: "0" }}
+        transition={{ delay: 1, duration: 1 }}
+      >
         <Flex
           w="100%"
           justifyContent="center"
@@ -31,7 +37,7 @@ function Main() {
             }}
             src={napoliMember}
           ></Image>
-          <Heading
+          <MotionHeading
             position="absolute"
             top="40%"
             left="20%"
@@ -46,10 +52,13 @@ function Main() {
             fontWeight="extrabold"
             bgGradient="linear(to-r, cyan.100, blue.300,  blue.600)"
             bgClip="text"
+            initial={{ opacity: 0, y: "-200vh" }}
+            animate={{ opacity: 1, y: "0" }}
+            transition={{ delay: 2, duration: 1.5 }}
           >
             SSC NAPOLI
-          </Heading>
-          <Heading
+          </MotionHeading>
+          {/* <Heading
             position="absolute"
             top="65%"
             left="40%"
@@ -66,7 +75,7 @@ function Main() {
             bgClip="text"
           >
             Players
-          </Heading>
+          </Heading> */}
         </Flex>
         {/* <Heading
           mb={20}
@@ -81,7 +90,7 @@ function Main() {
         >
           イタリアのサッカーチーム SSC NAPOLIについて紹介します
         </Heading> */}
-      </Container>
+      </MotionContainer>
       <Container maxW="container.lg" mt={16}>
         <Divider />
         <Flex justifyContent="space-between" mt={20} mb={20}>
