@@ -60,10 +60,10 @@ function Main() {
             bgClip="text"
             initial={{ opacity: 0, y: "-200vh" }}
             animate={{ opacity: 1, y: "0", rotate: 360 }}
-            transition={{ delay: 2, duration: 3, type: "spring",  }}
+            transition={{ delay: 2, duration: 3, type: "spring" }}
             whileHover={{
               scale: 1.1,
-              transition:{duration:0.5}
+              transition: { duration: 0.5 },
             }}
           >
             SSC NAPOLI
