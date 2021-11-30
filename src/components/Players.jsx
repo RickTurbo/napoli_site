@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Accordion,
   AccordionButton,
@@ -35,16 +35,38 @@ import Lobotka from "../assets/Lobotka.JPG";
 import Mario from "../assets/Mario.JPG";
 import Malcuit from "../assets/Malcuit.JPG";
 import Ghoulam from "../assets/Ghoulam.JPG";
+import { animationContainer, fadeInLeft, fadeInRight, fadeInUp, MotionBox, MotionContainer, MotionFlex } from "../animations/variants";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Players() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: [0.25],
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
   return (
     <>
-      <Container maxW="container.xl">
-        <Flex>
+      <MotionContainer
+        maxW="container.xl"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={animationContainer}
+      >
+        <MotionFlex>
           <Heading color="blue.300" fontWeight="light" fontSize="6xl" id="FW">
             FW
           </Heading>
-        </Flex>
+        </MotionFlex>
         <Box mb={8}>
           <Divider w={52} color="blue.300" />
         </Box>
@@ -59,7 +81,7 @@ function Players() {
           }}
           gap={6}
         >
-          <Box _hover={{ opacity: 0.9 }}>
+          <MotionBox _hover={{ opacity: 0.9 }}  variants={fadeInUp} >
             <Image w="100%" src={Lozano} borderRadius="lg" />
             <Accordion allowToggle mt={5}>
               <AccordionItem>
@@ -87,13 +109,13 @@ function Players() {
                     <Box pr="4">1995</Box>
                     <Box>07/30</Box>
                   </Flex>
-                  <Box pt="4" color='blue.700'>
+                  <Box pt="4" color="blue.700">
                     あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
                   </Box>
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
-          </Box>
+          </MotionBox>
 
           <Box
             mt={{
@@ -818,7 +840,7 @@ function Players() {
             </Accordion>
           </Box>
         </Grid>
-      </Container>
+      </MotionContainer>
     </>
   );
 }

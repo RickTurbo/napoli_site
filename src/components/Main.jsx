@@ -1,16 +1,33 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Container, Divider, Flex, Heading } from "@chakra-ui/layout";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import React from "react";
+import React, { useEffect } from "react";
 import napoliMember from "../assets/napoli-member.jpg";
 import napoliRed from "../assets/napoli_red.jpg";
 import {
+  fadeInRight,
   MotionButton,
   MotionContainer,
   MotionHeading,
 } from "../animations/variants";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 function Main() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: [0.25],
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
     <Box mt={10} id="home">
       <MotionContainer
@@ -48,11 +65,11 @@ function Main() {
             top="40%"
             left="20%"
             fontSize={{
-              sm: "3xl",
-              md: "6xl",
+              sm: "4xl",
+              md: "7xl",
               lg: "9xl",
               xl: "9xl",
-              base: "3xl",
+              base: "4xl",
             }}
             color="blue.200"
             fontWeight="extrabold"
@@ -218,11 +235,17 @@ function Main() {
         </Flex>
       </Container>
 
-      <Container maxW="container.xl">
+      <MotionContainer
+        maxW="container.xl"
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={fadeInRight}
+      >
         <Flex w="100%" justifyContent="center" alignItems="center">
           <Image w="80%" src={napoliRed}></Image>
         </Flex>
-      </Container>
+      </MotionContainer>
     </Box>
   );
 }
