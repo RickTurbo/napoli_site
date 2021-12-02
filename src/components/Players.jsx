@@ -62,6 +62,7 @@ function Players() {
       controls.start("hidden");
     }
   }, [controls, inView]);
+
   return (
     <MotionContainer
       maxW="container.xl"
@@ -335,7 +336,7 @@ function Players() {
         }}
         gap={6}
       >
-        <MotionBox _hover={{ opacity: 0.9 }} variants={fadeInUp}>
+        <MotionBox _hover={{ opacity: 0.9 }} variants={fadeInUp} >
           <Image w="100%" src={Zielinski} borderRadius="lg" />
           <Accordion allowToggle mt={5}>
             <AccordionItem>
