@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { Button } from "@chakra-ui/button";
 import Icon from "@chakra-ui/icon";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
 import { Link, Stack } from "@chakra-ui/layout";
-import { Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay } from "@chakra-ui/modal";
+import {
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+} from "@chakra-ui/modal";
 import { memo } from "react";
 import { FaSistrix, FaWaze } from "react-icons/fa";
+import { useHistory } from "react-router";
 
 export const MenuDrawer = memo((props) => {
-  const {isOpen, onClose} = props
+  const history = useHistory();
+  const onClickPlayers = useCallback(() => history.push("/players"), [history]);
+  const onClickHistory = useCallback(() => history.push("/history"), [history]);
+  const onClickCrew = useCallback(() => history.push("/crew"), [history]);
+  const { isOpen, onClose } = props;
   const btnRef = React.useRef();
   return (
     <Drawer
@@ -38,6 +51,7 @@ export const MenuDrawer = memo((props) => {
               rounded="base"
               _hover={{ bg: "gray.200" }}
               p={2}
+              onClick={onClickPlayers}
             >
               Players
             </Link>
@@ -47,6 +61,7 @@ export const MenuDrawer = memo((props) => {
               rounded="base"
               _hover={{ bg: "gray.200" }}
               p={2}
+              onClick={onClickCrew}
             >
               Crew
             </Link>
@@ -56,6 +71,7 @@ export const MenuDrawer = memo((props) => {
               rounded="base"
               _hover={{ bg: "gray.200" }}
               p={2}
+              onClick={onClickHistory}
             >
               History
             </Link>

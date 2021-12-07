@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { Button } from "@chakra-ui/button";
-import { Box, Divider, Flex } from "@chakra-ui/layout";
+import { Box, Divider, Flex, Link } from "@chakra-ui/layout";
 import { FaWaze, FaSistrix } from "react-icons/fa";
 import Icon from "@chakra-ui/icon";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
@@ -12,9 +12,15 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { MotionBox, MotionButton } from "../animations/variants";
 import { MenuDrawer } from "./molecules/MenuDrawer";
+import { useHistory } from "react-router";
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const history = useHistory();
+  const onClickHome = useCallback(() => history.push("/"), [history]);
+  const onClickPlayers = useCallback(() => history.push("/players"), [history]);
+  const onClickHistory = useCallback(() => history.push("/history"), [history]);
+  const onClickCrew = useCallback(() => history.push("/crew"), [history]);
   const btnRef = React.useRef();
 
   return (
@@ -27,7 +33,7 @@ function Header() {
       w="100%"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 3, duration: 3 }}
+      // transition={{ delay: 3, duration: 3 }}
     >
       <header>
         <Flex
@@ -47,14 +53,16 @@ function Header() {
 
               <MenuDrawer onClose={onClose} isOpen={isOpen} />
 
-              <AnchorLink href="#home" offset="100">
+              
+              <Link   onClick={onClickHome} >
                 <Image
                   boxSize={{ base: "40px", md: "60px" }}
                   src={napoliLogo}
                   alt="brand"
                   mr="8"
                 />
-              </AnchorLink>
+              </Link>
+            
 
               <Icon as={FaWaze} display={{ base: "none", md: "block" }}></Icon>
               <InputGroup display={{ base: "none", md: "block" }}>
@@ -75,6 +83,7 @@ function Header() {
                 fontSize="lg"
                 variant="link"
                 whileHover={{ scale: 1.2 }}
+                onClick={onClickPlayers}
               >
                 Players
               </MotionButton>
@@ -85,6 +94,7 @@ function Header() {
               fontSize="lg"
               variant="link"
               whileHover={{ scale: 1.2 }}
+              onClick={onClickCrew}
             >
               Crew
             </MotionButton>
@@ -93,6 +103,7 @@ function Header() {
               fontSize="lg"
               variant="link"
               whileHover={{ scale: 1.2 }}
+              onClick={onClickHistory}
             >
               <AnchorLink href="#History" offset="100">
                 History

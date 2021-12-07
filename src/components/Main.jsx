@@ -1,21 +1,28 @@
 import { Image } from "@chakra-ui/image";
-import { Box, Container, Divider, Flex, Heading } from "@chakra-ui/layout";
+import { Box, Container,  Flex,} from "@chakra-ui/layout";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import napoliMember from "../assets/napoli-member.jpg";
-import napoliRed from "../assets/napoli_red.jpg";
+
 import {
-  fadeInRight,
+  // fadeInRight,
   MotionButton,
   MotionContainer,
   MotionHeading,
 } from "../animations/variants";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
+import { useHistory } from "react-router";
 
 function Main() {
+  const history = useHistory();
+
+  const onClickPlayers = useCallback(() => history.push("/players"), [history]);
+  const onClickHistory = useCallback(() => history.push("/history"), [history]);
+  const onClickCrew = useCallback(() => history.push("/crew"), [history]);
+
   const controls = useAnimation();
-  const [ref, inView] = useInView({
+  const [, inView] = useInView({
     threshold: [0.25],
     triggerOnce: false,
   });
@@ -118,9 +125,9 @@ function Main() {
           イタリアのサッカーチーム SSC NAPOLIについて紹介します
         </Heading> */}
       </MotionContainer>
-      <Container maxW="container.lg" mt={16}>
-        <Divider />
-        <Flex justifyContent="space-between" mt={20} mb={20}>
+      <Container maxW="container.lg" >
+        {/* <Divider /> */}
+        <Flex justifyContent="space-between"  >
           <MotionButton
             color="white"
             bgGradient="linear(to-r, cyan.400,   pink.400)"
@@ -132,6 +139,7 @@ function Main() {
               scale: 1.1,
               boxShadow: "0px 0px 8px rgb(255,255,255) ",
             }}
+            onClick={onClickPlayers}
           >
             <AnchorLink href="#players" offset="110">
               Players
@@ -148,6 +156,7 @@ function Main() {
               scale: 1.1,
               boxShadow: "0px 0px 8px rgb(255,255,255) ",
             }}
+            onClick={onClickCrew}
           >
             Crew
           </MotionButton>
@@ -162,6 +171,7 @@ function Main() {
               scale: 1.1,
               boxShadow: "0px 0px 8px rgb(255,255,255) ",
             }}
+            onClick={onClickHistory}
           >
             <AnchorLink href="#History" offset="110">
               History
@@ -169,83 +179,9 @@ function Main() {
           </MotionButton>
         </Flex>
         <Box>
-          <Divider />
+          {/* <Divider /> */}
         </Box>
       </Container>
-
-      <Container maxW="container.sm" mb={6}>
-        <Flex alignItems="center" justifyContent="center" mt={14}>
-          <Heading
-            bgGradient="linear(to-r, cyan.400, blue.300,  pink.200)"
-            bgClip="text"
-            fontWeight="extrabold"
-            id="players"
-          >
-            Players
-          </Heading>
-        </Flex>
-        <Flex justifyContent="space-between" mt={6}>
-          <AnchorLink href="#FW" offset="90">
-            <MotionButton
-              colorScheme="blue"
-              px={{ base: 4, md: 10 }}
-              whileHover={{
-                scale: 1.1,
-              }}
-            >
-              FW
-            </MotionButton>
-          </AnchorLink>
-          <AnchorLink href="#MF" offset="100">
-            <MotionButton
-              colorScheme="blue"
-              px={{ base: 4, md: 10 }}
-              whileHover={{
-                scale: 1.1,
-              }}
-            >
-              MF
-            </MotionButton>
-          </AnchorLink>
-          <AnchorLink href="#DF" offset="100">
-            <MotionButton
-              colorScheme="blue"
-              px={{ base: 4, md: 10 }}
-              whileHover={{
-                scale: 1.1,
-              }}
-            >
-              DF
-            </MotionButton>
-          </AnchorLink>
-          <AnchorLink href="#GK" offset="100">
-            <MotionButton
-              colorScheme="blue"
-              px={{ base: 4, md: 10 }}
-              whileHover={{
-                scale: 1.1,
-              }}
-            >
-              GK
-            </MotionButton>
-          </AnchorLink>
-        </Flex>
-        <Flex mt={5} justifyContent="center">
-          <Divider />
-        </Flex>
-      </Container>
-
-      <MotionContainer
-        maxW="container.xl"
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={fadeInRight}
-      >
-        <Flex w="100%" justifyContent="center" alignItems="center">
-          <Image w="80%" src={napoliRed}></Image>
-        </Flex>
-      </MotionContainer>
     </Box>
   );
 }
