@@ -47,15 +47,23 @@ function History() {
                 bgClip="text"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 2 }}
+                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 2.5 }}
               >
                 <Box>
                   イタリアのサッカーチーム SSC NAPOLIの歴史について紹介します
                 </Box>
               </MotionHeading>
-              <Box mt="6" fontWeight="medium" mb="6" fontSize="xl">
+              <MotionBox
+                mt="6"
+                fontWeight="medium"
+                mb="6"
+                fontSize="xl"
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 2.5 }}
+              >
                 SSC NAPOLIの歴史を紹介します
-              </Box>
+              </MotionBox>
             </MotionBox>
 
             <Box w="100%">
