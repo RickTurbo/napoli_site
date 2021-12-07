@@ -66,7 +66,9 @@ function History() {
               </MotionBox>
             </MotionBox>
 
-            <Box w="100%">
+            <MotionBox w="100%"  initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 2.5 }}>
               <Image
                 w="100%"
                 src={historyMember}
@@ -74,7 +76,7 @@ function History() {
                 borderRadius="lg"
                 _hover={{ opacity: 0.9 }}
               />
-            </Box>
+            </MotionBox>
           </Flex>
         </Container>
       </Box>
