@@ -1,5 +1,5 @@
 import { Image } from "@chakra-ui/image";
-import { Box, Container,  Flex,} from "@chakra-ui/layout";
+import { Box, Container, Flex } from "@chakra-ui/layout";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import React, { useCallback, useEffect } from "react";
 import napoliMember from "../assets/napoli-member.jpg";
@@ -20,6 +20,19 @@ function Main() {
   const onClickPlayers = useCallback(() => history.push("/players"), [history]);
   const onClickHistory = useCallback(() => history.push("/history"), [history]);
   const onClickCrew = useCallback(() => history.push("/crew"), [history]);
+
+  const variantButton = {
+    hidden: { opacity: 0, y: 180 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 1,
+        delay: 0.6,
+      },
+    },
+  };
 
   const controls = useAnimation();
   const [, inView] = useInView({
@@ -125,9 +138,9 @@ function Main() {
           イタリアのサッカーチーム SSC NAPOLIについて紹介します
         </Heading> */}
       </MotionContainer>
-      <Container maxW="container.lg" >
+      <Container maxW="container.lg">
         {/* <Divider /> */}
-        <Flex justifyContent="space-between"  >
+        <Flex justifyContent="space-between">
           <MotionButton
             color="white"
             bgGradient="linear(to-r, cyan.400,   pink.400)"
@@ -140,6 +153,9 @@ function Main() {
               boxShadow: "0px 0px 8px rgb(255,255,255) ",
             }}
             onClick={onClickPlayers}
+            variants={variantButton}
+            initial="hidden"
+            animate="show"
           >
             <AnchorLink href="#players" offset="110">
               Players
@@ -157,6 +173,9 @@ function Main() {
               boxShadow: "0px 0px 8px rgb(255,255,255) ",
             }}
             onClick={onClickCrew}
+            variants={variantButton}
+            initial="hidden"
+            animate="show"
           >
             Crew
           </MotionButton>
@@ -172,15 +191,16 @@ function Main() {
               boxShadow: "0px 0px 8px rgb(255,255,255) ",
             }}
             onClick={onClickHistory}
+            variants={variantButton}
+            initial="hidden"
+            animate="show"
           >
             <AnchorLink href="#History" offset="110">
               History
             </AnchorLink>
           </MotionButton>
         </Flex>
-        <Box>
-          {/* <Divider /> */}
-        </Box>
+        <Box>{/* <Divider /> */}</Box>
       </Container>
     </Box>
   );

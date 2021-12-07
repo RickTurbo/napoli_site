@@ -31,9 +31,13 @@ function Header() {
       opacity="0.9"
       bg="gray.50"
       w="100%"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      // transition={{ delay: 3, duration: 3 }}
+      initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+        delay: 0.6,
+      }}
     >
       <header>
         <Flex
@@ -53,8 +57,7 @@ function Header() {
 
               <MenuDrawer onClose={onClose} isOpen={isOpen} />
 
-              
-              <Link   onClick={onClickHome} >
+              <Link onClick={onClickHome}>
                 <Image
                   boxSize={{ base: "40px", md: "60px" }}
                   src={napoliLogo}
@@ -62,7 +65,6 @@ function Header() {
                   mr="8"
                 />
               </Link>
-            
 
               <Icon as={FaWaze} display={{ base: "none", md: "block" }}></Icon>
               <InputGroup display={{ base: "none", md: "block" }}>
