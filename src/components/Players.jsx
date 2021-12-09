@@ -37,6 +37,7 @@ import Malcuit from "../assets/Malcuit.JPG";
 import Ghoulam from "../assets/Ghoulam.JPG";
 import napoliRed from "../assets/napoli_red.jpg";
 import {
+  animationBounce,
   animationContainer,
   // fadeInLeft,
   fadeInRight,
@@ -153,7 +154,6 @@ function Players() {
         ref={ref}
         initial="hidden"
         animate={controls}
-        variants={animationContainer}
       >
         <MotionFlex>
           <MotionHeading
@@ -161,7 +161,9 @@ function Players() {
             fontWeight="light"
             fontSize="6xl"
             id="FW"
-            variants={fadeInRight}
+            // variants={fadeInRight}
+            variants={animationBounce}
+          
           >
             FW
           </MotionHeading>

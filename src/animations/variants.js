@@ -25,10 +25,26 @@ export const animationContainer = {
   },
 };
 
+export const animationBounce = {
+  hidden: {
+    opacity:0,
+    x: "-100vw",
+  },
+  visible: {
+    x: 0,
+    opacity:1,
+    transition: {
+      type: "spring",
+      duration: 2,
+      bounce: 0.3,
+    },
+  },
+};
+
 export const fadeInUp = {
   hidden: {
     opacity: 0,
-    y: 20,
+    y: 60,
   },
   visible: {
     opacity: 1,
