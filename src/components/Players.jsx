@@ -38,9 +38,9 @@ import Ghoulam from "../assets/Ghoulam.JPG";
 import napoliRed from "../assets/napoli_red.jpg";
 import {
   animationBounce,
-  animationContainer,
+  // animationContainer,
   // fadeInLeft,
-  fadeInRight,
+  // fadeInRight,
   fadeInUp,
   MotionBox,
   MotionButton,
