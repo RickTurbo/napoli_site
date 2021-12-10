@@ -21,14 +21,14 @@ import {
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import Zielinski from "../../assets/Zielinski.JPG";
-import Elmas from "../../assets/Elmas.JPG";
-import Demme from "../../assets/Demme.JPG";
-import Fabian from "../../assets/Fabian.JPG";
-import Lobotka from "../../assets/Lobotka.JPG";
-import Anguissa from "../../assets/Anguissa.JPG";
+import Rrahmani from "../../assets/Rrahmani.JPG";
+import Koulybaly from "../../assets/Koulibaly.JPG";
+import DiLorenzo from "../../assets/DiLorenzo.JPG";
+import Mario from "../../assets/Mario.JPG";
+import Malcuit from "../../assets/Malcuit.JPG";
+import Ghoulam from "../../assets/Ghoulam.JPG";
 
-export const PlayersMF = memo(() => {
+export const PlayersDF = memo(() => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: [0.3],
@@ -44,22 +44,21 @@ export const PlayersMF = memo(() => {
   }, [controls, inView]);
 
   return (
-    <MotionBox
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={animationContainer}
-    >
+    <MotionBox 
+    ref={ref}
+    initial="hidden"
+    animate={controls}
+    variants={animationContainer}>
       <Flex>
         <MotionHeading
           color="blue.300"
           fontWeight="light"
           fontSize="6xl"
-          id="MF"
+          id="DF"
           mt={8}
           variants={animationBounce}
         >
-          MF
+          DF
         </MotionHeading>
       </Flex>
       <Box mb={8}>
@@ -76,7 +75,7 @@ export const PlayersMF = memo(() => {
         gap={6}
       >
         <MotionBox _hover={{ opacity: 0.9 }} variants={fadeInUp}>
-          <Image w="100%" src={Zielinski} borderRadius="lg" />
+          <Image w="100%" src={Rrahmani} borderRadius="lg" />
           <Accordion allowToggle mt={5}>
             <AccordionItem>
               <h2>
@@ -87,81 +86,7 @@ export const PlayersMF = memo(() => {
                     fontWeight="bold"
                     color="blue.300"
                   >
-                    Piotr Zieliński 20
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
-        </MotionBox>
-
-        <MotionBox
-          mt={{
-            sm: "10",
-            md: "0",
-            lg: "0",
-            xl: "0",
-            base: "10",
-          }}
-          _hover={{ opacity: 0.9 }}
-          variants={fadeInUp}
-        >
-          <Image w="100%" src={Elmas} borderRadius="lg" />
-          <Accordion allowToggle mt={5}>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box
-                    flex="1"
-                    textAlign="left"
-                    fontWeight="bold"
-                    color="blue.300"
-                  >
-                    Elif Elmas 7
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
-        </MotionBox>
-
-        <MotionBox
-          mt={{
-            sm: "10",
-            md: "0",
-            lg: "0",
-            xl: "0",
-            base: "10",
-          }}
-          _hover={{ opacity: 0.9 }}
-          variants={fadeInUp}
-        >
-          <Image w="100%" src={Fabian} borderRadius="lg" />
-          <Accordion allowToggle mt={5}>
-            <AccordionItem>
-              <h2>
-                <AccordionButton>
-                  <Box
-                    flex="1"
-                    textAlign="left"
-                    fontWeight="bold"
-                    color="blue.300"
-                  >
-                    Fabian Ruiz 8
+                    Amir Rrahmani 13
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
@@ -186,7 +111,7 @@ export const PlayersMF = memo(() => {
           _hover={{ opacity: 0.9 }}
           variants={fadeInUp}
         >
-          <Image w="100%" src={Demme} borderRadius="lg" />
+          <Image w="100%" src={Koulybaly} borderRadius="lg" />
           <Accordion allowToggle mt={5}>
             <AccordionItem>
               <h2>
@@ -197,7 +122,7 @@ export const PlayersMF = memo(() => {
                     fontWeight="bold"
                     color="blue.300"
                   >
-                    Diego Demme 4
+                    Kalidou Koulibaly 26
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
@@ -222,7 +147,7 @@ export const PlayersMF = memo(() => {
           _hover={{ opacity: 0.9 }}
           variants={fadeInUp}
         >
-          <Image w="100%" src={Anguissa} borderRadius="lg" />
+          <Image w="100%" src={DiLorenzo} borderRadius="lg" />
           <Accordion allowToggle mt={5}>
             <AccordionItem>
               <h2>
@@ -233,7 +158,7 @@ export const PlayersMF = memo(() => {
                     fontWeight="bold"
                     color="blue.300"
                   >
-                    André-Frank Zambo Anguissa 99
+                    Giovanni Di Lorenzo 22
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
@@ -258,7 +183,7 @@ export const PlayersMF = memo(() => {
           _hover={{ opacity: 0.9 }}
           variants={fadeInUp}
         >
-          <Image w="100%" src={Lobotka} borderRadius="lg" />
+          <Image w="100%" src={Mario} borderRadius="lg" />
           <Accordion allowToggle mt={5}>
             <AccordionItem>
               <h2>
@@ -269,7 +194,79 @@ export const PlayersMF = memo(() => {
                     fontWeight="bold"
                     color="blue.300"
                   >
-                    Stanislav Lobotka 68
+                    Mario Rui 6
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        </MotionBox>
+        <MotionBox
+          mt={{
+            sm: "10",
+            md: "0",
+            lg: "0",
+            xl: "0",
+            base: "10",
+          }}
+          _hover={{ opacity: 0.9 }}
+          variants={fadeInUp}
+        >
+          <Image w="100%" src={Malcuit} borderRadius="lg" />
+          <Accordion allowToggle mt={5}>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontWeight="bold"
+                    color="blue.300"
+                  >
+                    Kévin Malcuit ２
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        </MotionBox>
+        <MotionBox
+          mt={{
+            sm: "10",
+            md: "0",
+            lg: "0",
+            xl: "0",
+            base: "10",
+          }}
+          _hover={{ opacity: 0.9 }}
+          variants={fadeInUp}
+        >
+          <Image w="100%" src={Ghoulam} borderRadius="lg" />
+          <Accordion allowToggle mt={5}>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontWeight="bold"
+                    color="blue.300"
+                  >
+                    Faouzi Ghoulam 31
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>

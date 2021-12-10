@@ -7,29 +7,15 @@ import {
   AccordionPanel,
 } from "@chakra-ui/accordion";
 import { Image } from "@chakra-ui/image";
-import {
-  Box,
-  Container,
-  Divider,
-  Flex,
-  Grid,
-  Heading,
-} from "@chakra-ui/layout";
+import { Box, Container, Divider, Flex, Heading } from "@chakra-ui/layout";
+import napoliRed from "../assets/napoli_red.jpg";
 import Lozano from "../assets/Lozano.JPG";
 import Insigne from "../assets/Insigne.PNG";
 import Osimhen from "../assets/Osimhen.JPG";
 import Petagna from "../assets/Petagna.JPG";
 import Politano from "../assets/Politano.JPG";
 import Mertens from "../assets/Mertens.JPG";
-import Rrahmani from "../assets/Rrahmani.JPG";
-import Koulybaly from "../assets/Koulibaly.JPG";
-import DiLorenzo from "../assets/DiLorenzo.JPG";
-import Meret from "../assets/Meret.JPG";
-import Ospina from "../assets/Ospina.JPG";
-import Mario from "../assets/Mario.JPG";
-import Malcuit from "../assets/Malcuit.JPG";
-import Ghoulam from "../assets/Ghoulam.JPG";
-import napoliRed from "../assets/napoli_red.jpg";
+
 import {
   animationBounce,
   animationContainer,
@@ -50,6 +36,8 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Header from "./Header";
 import { PacmanLoader } from "react-spinners";
 import { PlayersMF } from "./molecules/PlayersMF";
+import { PlayersDF } from "./molecules/PlayersDF";
+import { PlayersGK } from "./molecules/PlayersGK";
 
 function Players() {
   const [loading, setLoading] = useState(false);
@@ -57,7 +45,7 @@ function Players() {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: [0.1],
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   useEffect(() => {
@@ -152,16 +140,13 @@ function Players() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 2.5 }}
-            // ref={ref}
-            // initial="hidden"
-            // animate={controls}
-            // variants={fadeInRight}
           >
             <Flex w="100%" justifyContent="center" alignItems="center">
               <Image w="80%" src={napoliRed}></Image>
             </Flex>
           </MotionContainer>
           <MotionContainer maxW="container.xl">
+
             <MotionBox
               ref={ref}
               initial="hidden"
@@ -422,322 +407,13 @@ function Players() {
               </MotionGrid>
             </MotionBox>
 
-                  <PlayersMF/>
+            <PlayersMF />
 
-            <Flex>
-              <Heading
-                color="blue.300"
-                fontWeight="light"
-                fontSize="6xl"
-                id="DF"
-                mt={8}
-              >
-                DF
-              </Heading>
-            </Flex>
-            <Box mb={8}>
-              <Divider w={52} color="blue.300" />
-            </Box>
-            <Grid
-              templateColumns={{
-                sm: "repeat(1, 1fr)",
-                md: "repeat(3,1fr)",
-                lg: "repeat(3,1fr)",
-                xl: "repeat(3,1fr)",
-                base: "repeat(1,1fr)",
-              }}
-              gap={6}
-            >
-              <Box _hover={{ opacity: 0.9 }}>
-                <Image w="100%" src={Rrahmani} borderRadius="lg" />
-                <Accordion allowToggle mt={5}>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          fontWeight="bold"
-                          color="blue.300"
-                        >
-                          Amir Rrahmani 13
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box>
-              <Box
-                mt={{
-                  sm: "10",
-                  md: "0",
-                  lg: "0",
-                  xl: "0",
-                  base: "10",
-                }}
-                _hover={{ opacity: 0.9 }}
-              >
-                <Image w="100%" src={Koulybaly} borderRadius="lg" />
-                <Accordion allowToggle mt={5}>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          fontWeight="bold"
-                          color="blue.300"
-                        >
-                          Kalidou Koulibaly 26
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box>
-              <Box
-                mt={{
-                  sm: "10",
-                  md: "0",
-                  lg: "0",
-                  xl: "0",
-                  base: "10",
-                }}
-                _hover={{ opacity: 0.9 }}
-              >
-                <Image w="100%" src={DiLorenzo} borderRadius="lg" />
-                <Accordion allowToggle mt={5}>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          fontWeight="bold"
-                          color="blue.300"
-                        >
-                          Giovanni Di Lorenzo 22
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box>
-              <Box
-                mt={{
-                  sm: "10",
-                  md: "0",
-                  lg: "0",
-                  xl: "0",
-                  base: "10",
-                }}
-                _hover={{ opacity: 0.9 }}
-              >
-                <Image w="100%" src={Mario} borderRadius="lg" />
-                <Accordion allowToggle mt={5}>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          fontWeight="bold"
-                          color="blue.300"
-                        >
-                          Mario Rui 6
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box>
-              <Box
-                mt={{
-                  sm: "10",
-                  md: "0",
-                  lg: "0",
-                  xl: "0",
-                  base: "10",
-                }}
-                _hover={{ opacity: 0.9 }}
-              >
-                <Image w="100%" src={Malcuit} borderRadius="lg" />
-                <Accordion allowToggle mt={5}>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          fontWeight="bold"
-                          color="blue.300"
-                        >
-                          Kévin Malcuit ２
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box>
-              <Box
-                mt={{
-                  sm: "10",
-                  md: "0",
-                  lg: "0",
-                  xl: "0",
-                  base: "10",
-                }}
-                _hover={{ opacity: 0.9 }}
-              >
-                <Image w="100%" src={Ghoulam} borderRadius="lg" />
-                <Accordion allowToggle mt={5}>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          fontWeight="bold"
-                          color="blue.300"
-                        >
-                          Faouzi Ghoulam 31
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box>
-            </Grid>
+            <PlayersDF />
 
-            <Flex>
-              <Heading
-                color="blue.300"
-                fontWeight="light"
-                fontSize="6xl"
-                id="GK"
-                mt={8}
-              >
-                GK
-              </Heading>
-            </Flex>
-            <Box mb={8}>
-              <Divider w={52} color="blue.300" />
-            </Box>
-            <Grid
-              templateColumns={{
-                sm: "repeat(1, 1fr)",
-                md: "repeat(3,1fr)",
-                lg: "repeat(3,1fr)",
-                xl: "repeat(3,1fr)",
-                base: "repeat(1,1fr)",
-              }}
-              gap={6}
-            >
-              <Box _hover={{ opacity: 0.9 }}>
-                <Image w="100%" src={Meret} borderRadius="lg" />
-                <Accordion allowToggle mt={5}>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          fontWeight="bold"
-                          color="blue.300"
-                        >
-                          Alex Meret 1
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box>
-              <Box
-                mt={{
-                  sm: "10",
-                  md: "0",
-                  lg: "0",
-                  xl: "0",
-                  base: "10",
-                }}
-                _hover={{ opacity: 0.9 }}
-              >
-                <Image w="100%" src={Ospina} borderRadius="lg" />
-                <Accordion allowToggle mt={5}>
-                  <AccordionItem>
-                    <h2>
-                      <AccordionButton>
-                        <Box
-                          flex="1"
-                          textAlign="left"
-                          fontWeight="bold"
-                          color="blue.300"
-                        >
-                          David Ospina 25
-                        </Box>
-                        <AccordionIcon />
-                      </AccordionButton>
-                    </h2>
-                    <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </AccordionPanel>
-                  </AccordionItem>
-                </Accordion>
-              </Box>
-            </Grid>
-          </MotionContainer>{" "}
+            <PlayersGK />
+
+          </MotionContainer>
         </>
       )}
     </>
