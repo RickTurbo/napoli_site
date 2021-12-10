@@ -19,7 +19,7 @@ export const easing = [0.6, -0.05, 0.01, 0.99];
 export const animationContainer = {
   visible: {
     transition: {
-      staggerChildren: 0.5,
+      staggerChildren: 0.4,
       easing,
     },
   },

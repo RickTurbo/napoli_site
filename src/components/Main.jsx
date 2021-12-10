@@ -1,7 +1,7 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Container, Flex } from "@chakra-ui/layout";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback } from "react";
 import napoliMember from "../assets/napoli-member.jpg";
 
 import {
@@ -10,8 +10,6 @@ import {
   MotionContainer,
   MotionHeading,
 } from "../animations/variants";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
 import { useHistory } from "react-router";
 
 function Main() {
@@ -33,20 +31,6 @@ function Main() {
       },
     },
   };
-
-  const controls = useAnimation();
-  const [, inView] = useInView({
-    threshold: [0.25],
-    triggerOnce: false,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    } else {
-      controls.start("hidden");
-    }
-  }, [controls, inView]);
 
   return (
     <Box mt={10} id="home">
