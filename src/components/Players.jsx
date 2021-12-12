@@ -4,7 +4,7 @@ import { Image } from "@chakra-ui/image";
 import { Box, Container, Divider, Flex, Heading } from "@chakra-ui/layout";
 import napoliRed from "../assets/napoli_red.jpg";
 
-import { MotionButton, MotionContainer } from "../animations/variants";
+import { MotionButton, MotionContainer, MotionFlex, MotionHeading } from "../animations/variants";
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Header from "./Header";
@@ -36,16 +36,19 @@ function Players() {
             <Header />
           </Box>
           <Container maxW="container.sm" mb={6}>
-            <Flex alignItems="center" justifyContent="center" mt={14}>
-              <Heading
+            <MotionFlex alignItems="center" justifyContent="center" mt={14}>
+              <MotionHeading
                 bgGradient="linear(to-r, cyan.400, blue.300,  pink.200)"
                 bgClip="text"
                 fontWeight="extrabold"
                 id="players"
+                initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 2.5 }}
               >
                 Players
-              </Heading>
-            </Flex>
+              </MotionHeading>
+            </MotionFlex>
             <Flex justifyContent="space-between" mt={6}>
               <AnchorLink href="#FW" offset="90">
                 <MotionButton

@@ -24,7 +24,7 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 //   hidden: { opacity: 0 },
 // };
 
-const Name = {
+export const Name = {
   hidden: {
     y: 0,
   },
@@ -38,7 +38,7 @@ const Name = {
   },
 };
 
-const letter = {
+export const letter = {
   hidden: {
     y: 200,
     opacity: 0,
@@ -46,7 +46,7 @@ const letter = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 1, ...transition },
+    transition: { duration: 1, ...transition, type: "spring" ,bounce: 0.6,},
   },
 };
 

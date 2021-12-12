@@ -27,6 +27,7 @@ import DiLorenzo from "../../assets/DiLorenzo.JPG";
 import Mario from "../../assets/Mario.JPG";
 import Malcuit from "../../assets/Malcuit.JPG";
 import Ghoulam from "../../assets/Ghoulam.JPG";
+import Zanoli from "../../assets/Zanoli.JPG";
 
 export const PlayersDF = memo(() => {
   const controls = useAnimation();
@@ -267,6 +268,42 @@ export const PlayersDF = memo(() => {
                     color="blue.300"
                   >
                     Faouzi Ghoulam 31
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        </MotionBox>
+        <MotionBox
+          mt={{
+            sm: "10",
+            md: "0",
+            lg: "0",
+            xl: "0",
+            base: "10",
+          }}
+          _hover={{ opacity: 0.9 }}
+          variants={fadeInUp}
+        >
+          <Image w="100%" src={Zanoli} borderRadius="lg" />
+          <Accordion allowToggle mt={5}>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box
+                    flex="1"
+                    textAlign="left"
+                    fontWeight="bold"
+                    color="blue.300"
+                  >
+                    Alessandro Zanoli 59
                   </Box>
                   <AccordionIcon />
                 </AccordionButton>
