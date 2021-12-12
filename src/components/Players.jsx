@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Image } from "@chakra-ui/image";
-import { Box, Container, Divider, Flex, Heading } from "@chakra-ui/layout";
+import { Box, Container, Divider, Flex,  } from "@chakra-ui/layout";
 import napoliRed from "../assets/napoli_red.jpg";
 
 import { MotionButton, MotionContainer, MotionFlex, MotionHeading } from "../animations/variants";
