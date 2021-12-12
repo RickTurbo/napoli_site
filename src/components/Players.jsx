@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 import { Image } from "@chakra-ui/image";
-import { Box, Container, Divider, Flex,  } from "@chakra-ui/layout";
+import { Box, Container, Divider, Flex } from "@chakra-ui/layout";
 import napoliRed from "../assets/napoli_red.jpg";
 
-import { MotionButton, MotionContainer, MotionFlex, MotionHeading } from "../animations/variants";
+import {
+  MotionButton,
+  MotionContainer,
+  MotionFlex,
+  MotionHeading,
+} from "../animations/variants";
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Header from "./Header";
@@ -43,8 +48,8 @@ function Players() {
                 fontWeight="extrabold"
                 id="players"
                 initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 2.5 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 2.5 }}
               >
                 Players
               </MotionHeading>
