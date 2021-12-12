@@ -5,8 +5,6 @@ import React, { useCallback } from "react";
 import napoliMember from "../assets/napoli-member.jpg";
 
 import {
-  animationContainer,
-  fadeInUp,
   MotionBox,
   // fadeInRight,
   MotionButton,
@@ -18,11 +16,19 @@ import { useHistory } from "react-router";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
+const list = {
+  visible: {
+    opacity: 1,
+    transition: { when: "beforeChildren", staggerChildren: 0.3 },
+  },
+  hidden: { opacity: 0 },
+};
+
 const Name = {
   hidden: {
     y: 0,
   },
-  show: {
+  visible: {
     y: 0,
     transition: {
       delayChildren: 0.6,
@@ -34,10 +40,10 @@ const Name = {
 
 const letter = {
   hidden: {
-    y: 400,
+    y: 200,
     opacity: 0,
   },
-  show: {
+  visible: {
     y: 0,
     opacity: 1,
     transition: { duration: 1, ...transition },
@@ -46,7 +52,7 @@ const letter = {
 
 const variantButton = {
   hidden: { opacity: 0, y: 180 },
-  show: {
+  visible: {
     opacity: 1,
     y: 0,
     transition: {
@@ -68,6 +74,8 @@ function Main() {
     <Box mt={10} id="home">
       <MotionContainer
         maxW="container.xl"
+        initial="hidden"
+        animate="visible"
         // initial={{ opacity: 0, x: "200vh" }}
         // animate={{ opacity: 1, x: "0" }}
         // transition={{ delay: 1, duration: 2 }}
@@ -97,6 +105,14 @@ function Main() {
             src={napoliMember}
           ></Image>
           <MotionHeading
+            // variants={letter}
+            whileHover={{
+              scale: 1.1,
+              transition: { duration: 0.5 },
+            }}
+          ></MotionHeading>
+
+          <MotionHeading
             position="absolute"
             top="40%"
             left="20%"
@@ -107,30 +123,25 @@ function Main() {
               xl: "9xl",
               base: "4xl",
             }}
+            bgClip="text"
             color="blue.200"
             fontWeight="extrabold"
             bgGradient="linear(to-r, cyan.100, blue.300,  blue.600)"
-            bgClip="text"
-            variants={letter}
-            initial="hidden"
-            animate="show"
-            whileHover={{
-              scale: 1.1,
-              transition: { duration: 0.5 },
-            }}
           >
-            <MotionFlex >
-              <MotionBox>S</MotionBox>
-              <MotionBox>S</MotionBox>
-              <MotionBox>C</MotionBox>
-              <MotionBox>N</MotionBox>
-              <MotionBox>A</MotionBox>
-              <MotionBox>P</MotionBox>
-              <MotionBox>O</MotionBox>
-              <MotionBox>L</MotionBox>
-              <MotionBox>I</MotionBox>
+            <MotionFlex variants={Name}>
+              <MotionBox variants={letter}>S</MotionBox>
+              <MotionBox variants={letter}>S</MotionBox>
+              <MotionBox variants={letter}>C</MotionBox>
+              <MotionBox variants={letter} mr={10}></MotionBox>
+              <MotionBox variants={letter}>N</MotionBox>
+              <MotionBox variants={letter}>A</MotionBox>
+              <MotionBox variants={letter}>P</MotionBox>
+              <MotionBox variants={letter}>O</MotionBox>
+              <MotionBox variants={letter}>L</MotionBox>
+              <MotionBox variants={letter}>I</MotionBox>
             </MotionFlex>
           </MotionHeading>
+
           {/* <Heading
             position="absolute"
             top="65%"
@@ -181,7 +192,7 @@ function Main() {
             onClick={onClickPlayers}
             variants={variantButton}
             initial="hidden"
-            animate="show"
+            animate="visible"
           >
             <AnchorLink href="#players" offset="110">
               Players
@@ -201,7 +212,7 @@ function Main() {
             onClick={onClickCrew}
             variants={variantButton}
             initial="hidden"
-            animate="show"
+            animate="visible"
           >
             Crew
           </MotionButton>
@@ -219,7 +230,7 @@ function Main() {
             onClick={onClickHistory}
             variants={variantButton}
             initial="hidden"
-            animate="show"
+            animate="visible"
           >
             <AnchorLink href="#History" offset="110">
               History
