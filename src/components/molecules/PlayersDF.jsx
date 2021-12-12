@@ -31,7 +31,7 @@ import Ghoulam from "../../assets/Ghoulam.JPG";
 export const PlayersDF = memo(() => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: [0.3],
+    threshold: [0.18],
     triggerOnce: true,
   });
 
