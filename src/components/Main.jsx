@@ -16,13 +16,13 @@ import { useHistory } from "react-router";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
-const list = {
-  visible: {
-    opacity: 1,
-    transition: { when: "beforeChildren", staggerChildren: 0.3 },
-  },
-  hidden: { opacity: 0 },
-};
+// const list = {
+//   visible: {
+//     opacity: 1,
+//     transition: { when: "beforeChildren", staggerChildren: 0.3 },
+//   },
+//   hidden: { opacity: 0 },
+// };
 
 const Name = {
   hidden: {
