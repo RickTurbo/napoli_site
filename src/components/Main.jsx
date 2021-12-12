@@ -5,12 +5,57 @@ import React, { useCallback } from "react";
 import napoliMember from "../assets/napoli-member.jpg";
 
 import {
+  animationContainer,
+  fadeInUp,
+  MotionBox,
   // fadeInRight,
   MotionButton,
   MotionContainer,
+  MotionFlex,
   MotionHeading,
 } from "../animations/variants";
 import { useHistory } from "react-router";
+
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+
+const Name = {
+  hidden: {
+    y: 0,
+  },
+  show: {
+    y: 0,
+    transition: {
+      delayChildren: 0.6,
+      staggerChildren: 0.1,
+      staggerDirection: 1,
+    },
+  },
+};
+
+const letter = {
+  hidden: {
+    y: 400,
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 1, ...transition },
+  },
+};
+
+const variantButton = {
+  hidden: { opacity: 0, y: 180 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: "easeInOut",
+      duration: 1,
+      delay: 0.6,
+    },
+  },
+};
 
 function Main() {
   const history = useHistory();
@@ -19,26 +64,13 @@ function Main() {
   const onClickHistory = useCallback(() => history.push("/history"), [history]);
   const onClickCrew = useCallback(() => history.push("/crew"), [history]);
 
-  const variantButton = {
-    hidden: { opacity: 0, y: 180 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        ease: "easeInOut",
-        duration: 1,
-        delay: 0.6,
-      },
-    },
-  };
-
   return (
     <Box mt={10} id="home">
       <MotionContainer
         maxW="container.xl"
-        initial={{ opacity: 0, x: "200vh" }}
-        animate={{ opacity: 1, x: "0" }}
-        transition={{ delay: 1, duration: 2 }}
+        // initial={{ opacity: 0, x: "200vh" }}
+        // animate={{ opacity: 1, x: "0" }}
+        // transition={{ delay: 1, duration: 2 }}
       >
         <Flex
           w="100%"
@@ -79,15 +111,25 @@ function Main() {
             fontWeight="extrabold"
             bgGradient="linear(to-r, cyan.100, blue.300,  blue.600)"
             bgClip="text"
-            initial={{ opacity: 0, y: "-200vh" }}
-            animate={{ opacity: 1, y: "0", rotate: 360 }}
-            transition={{ delay: 2, duration: 3, type: "spring" }}
+            variants={letter}
+            initial="hidden"
+            animate="show"
             whileHover={{
               scale: 1.1,
               transition: { duration: 0.5 },
             }}
           >
-            SSC NAPOLI
+            <MotionFlex >
+              <MotionBox>S</MotionBox>
+              <MotionBox>S</MotionBox>
+              <MotionBox>C</MotionBox>
+              <MotionBox>N</MotionBox>
+              <MotionBox>A</MotionBox>
+              <MotionBox>P</MotionBox>
+              <MotionBox>O</MotionBox>
+              <MotionBox>L</MotionBox>
+              <MotionBox>I</MotionBox>
+            </MotionFlex>
           </MotionHeading>
           {/* <Heading
             position="absolute"

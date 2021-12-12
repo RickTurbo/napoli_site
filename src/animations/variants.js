@@ -14,6 +14,8 @@ export const MotionFlex = motion(Flex);
 
 export const MotionGrid = motion(Grid);
 
+
+
 export const easing = [0.6, -0.05, 0.01, 0.99];
 
 export const animationContainer = {
