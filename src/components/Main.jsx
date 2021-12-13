@@ -24,6 +24,20 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 //   hidden: { opacity: 0 },
 // };
 
+// const marqueeVariants = {
+//   visible: {
+//     x: [1200, -1200],
+//     transition: {
+//       x: {
+//         repeat: Infinity,
+//         repeatType: "loop",
+//         duration: 6,
+//         ease: "linear",
+//       },
+//     },
+//   },
+// };
+
 export const Name = {
   hidden: {
     y: 0,
@@ -161,8 +175,8 @@ function Main() {
             Players
           </Heading> */}
         </Flex>
-        {/* <Heading
-          mb={20}
+        {/* <MotionHeading
+          mb={10}
           textAlign="center"
           fontSize={{
             sm: "2xl",
@@ -171,9 +185,11 @@ function Main() {
             xl: "4xl",
             base: "2xl",
           }}
+          variants={marqueeVariants}
+          animate="visible"
         >
           イタリアのサッカーチーム SSC NAPOLIについて紹介します
-        </Heading> */}
+        </MotionHeading> */}
       </MotionContainer>
       <Container maxW="container.lg">
         {/* <Divider /> */}
