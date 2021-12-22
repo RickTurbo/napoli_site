@@ -3,6 +3,7 @@ import { Box, Container, Flex } from "@chakra-ui/layout";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import React, { useCallback } from "react";
 import napoliMember from "../assets/napoli-member.jpg";
+import napoli_3 from "../assets/Napoli_3.png";
 
 import {
   MotionBox,
@@ -13,8 +14,6 @@ import {
   MotionHeading,
 } from "../animations/variants";
 import { useHistory } from "react-router";
-
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 // const list = {
 //   visible: {
@@ -38,6 +37,8 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 //   },
 // };
 
+const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+
 export const Name = {
   hidden: {
     y: 0,
@@ -60,7 +61,7 @@ export const letter = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 1, ...transition, type: "spring" ,bounce: 0.6,},
+    transition: { duration: 1, ...transition, type: "spring", bounce: 0.6 },
   },
 };
 
