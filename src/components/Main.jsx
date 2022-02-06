@@ -3,7 +3,7 @@ import { Box, Container, Flex } from "@chakra-ui/layout";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import React, { useCallback } from "react";
 import napoliMember from "../assets/napoli-member.jpg";
-import napoli_3 from "../assets/Napoli_3.png";
+
 
 import {
   MotionBox,
